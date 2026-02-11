@@ -50,11 +50,10 @@ const config: Config = {
                     DEFAULT: "hsl(var(--card))",
                     foreground: "hsl(var(--card-foreground))",
                 },
-                // Cyberpunk Neon Colors
-                "neon-cyan": "#00f0ff",
-                "neon-pink": "#ff006e",
-                "neon-purple": "#8b00ff",
-                "neon-yellow": "#ffea00",
+                // Nebula Theme Colors
+                "indigo-nebula": "#6366f1",
+                "emerald-nebula": "#10b981",
+                "purple-nebula": "#a855f7",
             },
             borderRadius: {
                 lg: "var(--radius)",
@@ -62,30 +61,25 @@ const config: Config = {
                 sm: "calc(var(--radius) - 4px)",
             },
             boxShadow: {
-                "glow-sm": "0 0 10px rgba(0, 255, 255, 0.5)",
-                "glow-md": "0 0 15px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.3)",
-                "glow-lg": "0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.3)",
-                "glow-xl": "0 0 25px rgba(0, 255, 255, 1), 0 0 50px rgba(0, 255, 255, 0.7), 0 0 75px rgba(0, 255, 255, 0.5), 0 0 100px rgba(0, 255, 255, 0.3)",
-                "glow-pink": "0 0 15px rgba(255, 0, 110, 0.6), 0 0 30px rgba(255, 0, 110, 0.3)",
-                "glow-purple": "0 0 15px rgba(139, 0, 255, 0.6), 0 0 30px rgba(139, 0, 255, 0.3)",
-                "glow-destructive": "0 0 15px rgba(255, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.3)",
+                "nebula-primary": "0 0 15px rgba(99, 102, 241, 0.4), 0 0 30px rgba(99, 102, 241, 0.2)",
+                "nebula-secondary": "0 0 15px rgba(16, 185, 129, 0.4), 0 0 30px rgba(16, 185, 129, 0.2)",
             },
             animation: {
-                "glow-pulse": "glow-pulse 2s ease-in-out infinite",
-                "float": "float 3s ease-in-out infinite",
-                "slide-up": "slide-up 0.6s ease-out",
-                "slide-right": "slide-right 0.6s ease-out",
-                "scale-in": "scale-in 0.5s ease-out",
-                "glitch": "glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite",
-                "neon-flicker": "neon-flicker 1.5s infinite",
+                "nebula-pulse": "nebula-pulse 4s ease-in-out infinite",
+                "float": "float 5s ease-in-out infinite",
+                "slide-up": "slide-up 0.8s ease-out",
+                "slide-right": "slide-right 0.8s ease-out",
+                "scale-in": "scale-in 0.6s ease-out",
             },
             keyframes: {
-                "glow-pulse": {
+                "nebula-pulse": {
                     "0%, 100%": {
-                        boxShadow: "0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3)",
+                        opacity: "1",
+                        transform: "scale(1)",
                     },
                     "50%": {
-                        boxShadow: "0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.6), 0 0 60px rgba(0, 255, 255, 0.4)",
+                        opacity: "0.7",
+                        transform: "scale(1.05)",
                     },
                 },
                 "float": {

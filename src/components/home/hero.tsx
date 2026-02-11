@@ -11,12 +11,12 @@ export function Hero() {
                     className="text-4xl font-extrabold tracking-tight lg:text-6xl"
                     style={{ fontFamily: "var(--font-orbitron)" }}
                 >
-                    Hi, I&apos;m <span className="gradient-text text-glow-cyan inline-block animate-float relative">
+                    Hi, I&apos;m <span className="gradient-text text-glow-primary inline-block animate-float relative">
                         {portfolioData.personalInfo.name}
                     </span>
                 </h1>
                 <h2
-                    className="text-2xl font-semibold text-primary sm:text-3xl text-glow-cyan"
+                    className="text-2xl font-semibold text-primary sm:text-3xl text-glow-primary"
                     style={{ fontFamily: "var(--font-orbitron)" }}
                 >
                     {portfolioData.personalInfo.role}
@@ -49,7 +49,7 @@ export function Hero() {
                     href={portfolioData.socials.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-125 hover:drop-shadow-[0_0_15px_rgba(0,255,255,0.8)]"
+                    className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-125 hover:drop-shadow-[0_0_15px_rgba(var(--glow-primary),0.8)]"
                 >
                     <Github className="h-7 w-7" />
                 </a>
@@ -57,15 +57,15 @@ export function Hero() {
                     href={portfolioData.socials.linkedin}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-125 hover:drop-shadow-[0_0_15px_rgba(0,255,255,0.8)]"
+                    className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-125 hover:drop-shadow-[0_0_15px_rgba(var(--glow-primary),0.8)]"
                 >
                     <Linkedin className="h-7 w-7" />
                 </a>
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute left-0 top-1/4 h-2 w-32 bg-gradient-to-r from-neon-cyan/50 to-transparent blur-sm" />
-            <div className="absolute right-0 top-3/4 h-2 w-32 bg-gradient-to-l from-neon-pink/50 to-transparent blur-sm" />
+            <div className="absolute left-0 top-1/4 h-1 w-32 bg-gradient-to-r from-primary/30 to-transparent blur-md" />
+            <div className="absolute right-0 top-3/4 h-1 w-32 bg-gradient-to-l from-secondary/30 to-transparent blur-md" />
         </section>
     );
 }

@@ -68,14 +68,14 @@ export function CustomCursor() {
             {/* Main cursor */}
             <div
                 ref={cursorRef}
-                className="pointer-events-none fixed left-0 top-0 z-[9999] h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-neon-cyan transition-all duration-200 ease-out"
-                style={{ mixBlendMode: "difference" }}
+                className="pointer-events-none fixed left-0 top-0 z-[9999] h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-primary transition-all duration-200 ease-out shadow-[0_0_10px_rgba(var(--glow-primary),0.5)]"
+                style={{ mixBlendMode: "screen" }}
             />
 
             {/* Cursor glow */}
             <div
                 ref={cursorGlowRef}
-                className="pointer-events-none fixed left-0 top-0 z-[9998] h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full bg-neon-cyan opacity-20 blur-xl transition-all duration-300 ease-out"
+                className="pointer-events-none fixed left-0 top-0 z-[9998] h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary opacity-30 blur-xl transition-all duration-300 ease-out shadow-[0_0_30px_rgba(var(--glow-primary),0.3)]"
             />
         </>
     );

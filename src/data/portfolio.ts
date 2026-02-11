@@ -201,5 +201,10 @@ export const portfolioData = {
             degree: "Bachelor's degree, Information Technology",
             year: "2019 - 2024",
         },
+    ],
+    stats: [
+        { label: "Years Experience", value: "4+" },
+        { label: "Projects Completed", value: "5+" },
+        { label: "Technologies", value: "20+" },
     ]
 };

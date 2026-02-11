@@ -5,7 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { CustomCursor } from "@/components/ui/custom-cursor";
 import { ParallaxBackground } from "@/components/ui/parallax-background";
-import { NeonGrid } from "@/components/ui/neon-grid";
+import { NebulaGrid } from "@/components/ui/neon-grid";
 import { portfolioData } from "@/data/portfolio";
 import "./globals.css";
 import { ChatWidget } from "@/components/ChatWidget";
@@ -91,7 +91,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <CustomCursor />
-          <NeonGrid />
+          <NebulaGrid />
           <ParallaxBackground />
           <div className="relative z-10 flex min-h-screen flex-col">
             <Header />

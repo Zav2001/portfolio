@@ -9,7 +9,7 @@ import * as motion from "framer-motion/client";
 
 type Project = typeof portfolioData.projects[0];
 
-const badgeVariants = ["cyan", "pink", "purple"] as const;
+const badgeVariants = ["indigo", "emerald", "accent"] as const;
 
 // Project Card Component - displaying project details and link
 export function ProjectCard({ project }: { project: Project }) {
@@ -22,7 +22,7 @@ export function ProjectCard({ project }: { project: Project }) {
             <Card className="flex flex-col h-full overflow-hidden group relative">
                 {/* Animated gradient overlay on hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                    <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/10 via-neon-pink/10 to-neon-purple/10" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10" />
                 </div>
 
                 {/* Project preview */}
@@ -33,7 +33,7 @@ export function ProjectCard({ project }: { project: Project }) {
                         transition={{ duration: 0.4 }}
                     >
                         <span
-                            className="text-lg font-medium text-primary text-glow-cyan"
+                            className="text-lg font-medium text-primary text-glow-primary"
                             style={{ fontFamily: "var(--font-orbitron)" }}
                         >
                             {project.title}
@@ -58,7 +58,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 </div>
 
                 <CardHeader className="relative z-10">
-                    <CardTitle className="line-clamp-1">{project.title}</CardTitle>
+                    <CardTitle className="line-clamp-1 gradient-text">{project.title}</CardTitle>
                     <div className="flex flex-wrap gap-2 mt-2">
                         {project.techStack.map((tech, index) => (
                             <Badge key={tech} variant={badgeVariants[index % badgeVariants.length]}>

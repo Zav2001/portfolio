@@ -1,14 +1,14 @@
 import { portfolioData } from "@/data/portfolio";
 import { Badge } from "@/components/ui/badge";
 
-const badgeVariants = ["cyan", "pink", "purple"] as const;
+const badgeVariants = ["indigo", "emerald", "accent"] as const;
 
 export function Skills() {
     return (
         <section id="skills" className="relative py-16 md:py-24">
             <div className="container space-y-12">
                 <h2
-                    className="text-3xl md:text-4xl font-bold tracking-tight text-center gradient-text text-glow-cyan"
+                    className="text-3xl md:text-4xl font-bold tracking-tight text-center gradient-text text-glow-primary"
                     style={{ fontFamily: "var(--font-orbitron)" }}
                 >
                     Skills & Technologies
@@ -17,14 +17,14 @@ export function Skills() {
                     {portfolioData.skills.map((skillGroup, groupIndex) => (
                         <div
                             key={skillGroup.category}
-                            className="glass-card p-6 rounded-lg shadow-glow-sm hover:shadow-glow-md transition-all duration-300 hover:-translate-y-2 group"
+                            className="glass-card p-6 rounded-lg shadow-nebula-primary hover:shadow-[0_0_25px_rgba(99,102,241,0.3)] transition-all duration-300 hover:-translate-y-2 group"
                             style={{
                                 animationDelay: `${groupIndex * 0.1}s`,
-                                border: "1px solid rgba(0, 255, 255, 0.2)"
+                                border: "1px solid rgba(99, 102, 241, 0.1)"
                             }}
                         >
                             <h3
-                                className="text-xl font-semibold mb-4 text-primary group-hover:text-glow-cyan transition-all"
+                                className="text-xl font-semibold mb-4 text-primary group-hover:text-glow-primary transition-all"
                                 style={{ fontFamily: "var(--font-orbitron)" }}
                             >
                                 {skillGroup.category}
@@ -45,7 +45,7 @@ export function Skills() {
             </div>
 
             {/* Decorative accent line */}
-            <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-neon-cyan/50 to-transparent" />
+            <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
         </section>
     );
 }

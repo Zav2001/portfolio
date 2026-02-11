@@ -4,6 +4,8 @@ import { Skills } from "@/components/home/skills";
 import { Experience } from "@/components/home/experience";
 import { FeaturedProjects } from "@/components/home/featured-projects";
 import { Contact } from "@/components/home/contact";
+import { Stats } from "@/components/home/stats";
+
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 export default function Home() {
@@ -11,6 +13,9 @@ export default function Home() {
     <>
       <ScrollReveal>
         <Hero />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Stats />
       </ScrollReveal>
       <ScrollReveal>
         <FeaturedProjects />
@@ -21,6 +26,7 @@ export default function Home() {
       <ScrollReveal>
         <Experience />
       </ScrollReveal>
+
       <ScrollReveal>
         <About />
       </ScrollReveal>
