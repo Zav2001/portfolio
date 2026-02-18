@@ -176,6 +176,93 @@ export const portfolioData = {
                 ],
             },
         },
+        {
+            slug: "telegram-chess-miniapp",
+            title: "Telegram Chess - Real-Time Mini App",
+            description: "A full-stack real-time multiplayer chess platform built for Telegram Mini Apps, with server-authoritative game state, room-based sessions, live chat, spectators, and secure Telegram initData verification.",
+            techStack: ["React 19", "TypeScript", "Vite", "Node.js", "Express 5", "Socket.IO", "MongoDB", "chess.js", "Zod"],
+            link: null,
+            repo: {
+                label: "GitHub",
+                url: "https://github.com/Zav2001/telegram-chess",
+            },
+            thumbnail: "/projects/telegram-chess.jpg",
+            caseStudy: {
+                problem: "Needed a responsive chess experience directly inside Telegram with strict move validation, synchronized state across players/spectators, timer-based outcomes, and security controls suitable for public realtime usage.",
+                solution: "Built a monorepo with React/Vite client and Express/Socket.IO backend. Implemented server-authoritative move validation using chess.js, optimistic-safe game updates with atomic persistence checks, draw/resign/play-again flows, spectator presence tracking, and realtime chat. Added Telegram Mini App initData signature verification (HMAC), plus helmet, CORS, and rate limiting for backend hardening.",
+                impact: "Delivered a production-ready architecture for synchronous gameplay in Telegram with consistent room state, resilient event flow, and clear separation between UI, transport, and game-domain logic.",
+                challenges: [
+                    "Preventing race conditions for near-simultaneous move events",
+                    "Managing game clocks reliably with server timeout loops",
+                    "Verifying Telegram initData securely with safe hash comparisons",
+                    "Keeping spectators and players synchronized without stale state"
+                ],
+                learnings: [
+                    "Designing authoritative realtime game backends",
+                    "Socket event validation with schema-driven payload checks",
+                    "Security hardening for public websocket APIs",
+                    "Balancing UX responsiveness with strict server integrity"
+                ],
+            },
+        },
+        {
+            slug: "football-pickup-mobile",
+            title: "Football Pickup - Mobile Match Organizer",
+            description: "A cross-platform Expo/React Native app for organizing local pickup football games with realtime rosters/chat, map-driven pitch discovery, deep linking, and calendar invite export.",
+            techStack: ["React Native", "Expo SDK 54", "JavaScript", "Supabase (Auth, Postgres, Realtime, RLS)", "expo-location", "expo-linking", "expo-sharing"],
+            link: null,
+            repo: {
+                label: "GitHub",
+                url: "https://github.com/Zav2001/football-pickup",
+            },
+            thumbnail: "/projects/football-pickup.jpg",
+            caseStudy: {
+                problem: "Players needed a lightweight mobile workflow to create/join local matches, coordinate participants in realtime, and navigate pitch information without relying on heavyweight social platforms.",
+                solution: "Implemented a React Native app with Supabase-backed auth and data layer, realtime subscriptions for game and chat updates, profile management, game membership flows, and report handling. Added place search/map views, deep links (pickupfootball://game/<id>), push token registration hooks, and ICS file generation/sharing for calendar invites.",
+                impact: "Created an end-to-end mobile coordination tool that reduces friction from game discovery to attendance confirmation, while keeping core collaboration data in realtime sync across clients.",
+                challenges: [
+                    "Ensuring reliable realtime chat/message hydration with deduplication",
+                    "Handling cross-platform map/deep-link behavior (iOS/Android/Web)",
+                    "Designing safe data-access boundaries through Supabase RLS",
+                    "Supporting offline-like fallback patterns for pitch datasets"
+                ],
+                learnings: [
+                    "Production patterns for Expo + Supabase realtime apps",
+                    "Mobile-first UX for event logistics and participant coordination",
+                    "Cross-platform native capability integration (maps, sharing, notifications)",
+                    "Schema/policy design tradeoffs in managed backend platforms"
+                ],
+            },
+        },
+        {
+            slug: "docflow-document-review-saas",
+            title: "DocFlow - Document Review SaaS",
+            description: "A TypeScript React SaaS-style document review platform with PDF viewing, annotations, role-based permissions, notifications, analytics, and local persistence seeded from JSON datasets.",
+            techStack: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Redux Toolkit", "React Query", "React Router", "react-pdf", "Zod"],
+            link: null,
+            repo: {
+                label: "GitHub",
+                url: "https://github.com/Zav2001/docflow",
+            },
+            thumbnail: "/projects/docflow.jpg",
+            caseStudy: {
+                problem: "Needed a realistic document operations product simulation (upload/review/approve/comment/audit) without depending on external infrastructure, while still keeping UX and architecture close to production SaaS behavior.",
+                solution: "Built a modular frontend architecture with feature slices (documents, annotations, comments, notifications, sessions), strict TypeScript types, and role-based permission checks. Implemented PDF rendering and annotation overlays, local-storage persistence with JSON seed bootstrap, snapshot synchronization for quota safety, and API-like service abstractions to mimic async backend workflows.",
+                impact: "Produced a strong SaaS prototype that demonstrates full document lifecycle management, observability-style audit flows, and scalable frontend architecture patterns that can later be swapped to real backend services.",
+                challenges: [
+                    "Modeling complex document workflows on top of browser storage limits",
+                    "Keeping UI state consistent across Redux, query cache, and local storage",
+                    "Building annotation/comment flows with responsive PDF interactions",
+                    "Maintaining realistic auth/role boundaries in a local-only runtime"
+                ],
+                learnings: [
+                    "Designing backend-agnostic frontend service layers",
+                    "Advanced state orchestration in TypeScript React apps",
+                    "Practical local persistence strategies for product prototyping",
+                    "Permission-driven UI architecture for multi-role workflows"
+                ],
+            },
+        },
     ],
     experience: [
         {
@@ -204,7 +291,7 @@ export const portfolioData = {
     ],
     stats: [
         { label: "Years Experience", value: "4+" },
-        { label: "Projects Completed", value: "5+" },
+        { label: "Projects Completed", value: "8+" },
         { label: "Technologies", value: "20+" },
     ]
 };
